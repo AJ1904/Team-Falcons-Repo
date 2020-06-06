@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'covidAnalysyisReport';
+  title = 'Covid-19 Analysis Report';
+
+  constructor(
+    private router: Router
+  ) {
+    }
+
+    onSubmit(): void {
+    this.router.navigate(['/']);
+    this.title = '';
+
+    }
 }
+
